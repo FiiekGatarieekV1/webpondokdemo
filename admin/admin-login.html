@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Admin Login - Pondok</title>
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+.card{width:360px;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+label{display:block;margin:.5rem 0 0.2rem}
+input{width:100%;padding:.6rem;border-radius:6px;border:1px solid #ddd}
+button{margin-top:1rem;width:100%;padding:.7rem;border-radius:6px;border:0;background:#2b8a3e;color:white;font-weight:600}
+.msg{margin-top:.6rem;color:#c00}
+</style>
+</head>
+<body>
+<div class="card">
+<h3 style="margin:0 0 10px">Login Admin</h3>
+<label for="email">Email</label>
+<input id="email" type="email" placeholder="admin@domain.com" />
+<label for="password">Password</label>
+<input id="password" type="password" placeholder="••••••" />
+<button id="btnLogin">Masuk</button>
+<div class="msg" id="message"></div>
+<p style="font-size:12px;margin-top:10px">Buat akun admin awal melalui Firebase Console → Authentication → Add user.</p>
+</div>
+
+
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js'
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js'
+
+
+// firebaseConfig (dari Anda)
+const firebaseConfig = {
+apiKey: "AIzaSyAVTzmJCfSgy4hvpJ2GS8Di636bbC1Y4a0",
+authDomain: "website-pondok-5fe92.firebaseapp.com",
+projectId: "website-pondok-5fe92",
+storageBucket: "website-pondok-5fe92.firebasestorage.app",
+messagingSenderId: "347150996874",
+appId: "1:347150996874:web:c0e54103f88911f3f3e473",
+measurementId: "G-3E7REB7RYQ"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+const btn = document.getElementById('btnLogin');
+const msg = document.getElementById('message');
+
+
+btn.addEventListener('click', async () => {
+msg.textContent = '';
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+if (!email || !password) { msg.textContent = 'Isi email & password'; return; }
+try {
+await signInWithEmailAndPassword(auth, email, password);
+} catch (err) {
+msg.textContent = err.message || 'Gagal login';
+}
+});
+
+
+onAuthStateChanged(auth, user => {
+if (user) {
+window.location.href = 'admin-berita.html';
+}
+});
+</script>
+</body>
+</html>

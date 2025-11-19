@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Admin Berita - Pondok</title>
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,sans-serif;padding:20px}
+.hidden{display:none}
+input,textarea{width:100%;padding:.5rem;margin-top:.4rem;border-radius:6px;border:1px solid #ddd}
+button{padding:.6rem 1rem;border:0;border-radius:6px;background:#2b8a3e;color:#fff;font-weight:600}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="top">
+<h2>Admin Berita</h2>
+<div>
+<span id="adminEmail">-</span>
+<button id="btnLogout" style="margin-left:10px">Logout</button>
+</div>
+</div>
+
+
+<div id="adminUi" class="hidden">
+<h3>Tambah Berita</h3>
+<input id="title" placeholder="Judul berita" />
+<textarea id="content" rows="6" placeholder="Isi berita"></textarea>
+<button id="btnSave">Simpan Berita</button>
+
+
+<h3 style="margin-top:20px">Daftar Berita</h3>
+<div id="newsList"></div>
+</div>
+
+
+<div id="loading">Memeriksa akses...</div>
+
+
+<script type="module" src="setAdmin.js"></script>
+</body>
+</html>

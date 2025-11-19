@@ -1,0 +1,259 @@
+/* ===== Global Reset & Typography ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  font-weight: 500;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.navbar .nav-link {
+  color: #000 !important;   /* teks hitam */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important;   /* abu gelap saat hover */
+}
+
+.navbar .nav-link.active {
+  color: #000 !important;
+  font-weight: 700;
+  border-bottom: 2px solid #000; /* garis bawah aktif */
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(to right, #f8fff8, #ffffff);
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.hero-img {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ===== Tentang Section ===== */
+#about p {
+  text-align: justify;
+  color: #444;
+}
+
+/* ===== Visi & Misi ===== */
+#vision-mission {
+  background: #f8f9fa;
+}
+
+#vision-mission h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#vision-mission .card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#vision-mission .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+#vision-mission ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#vision-mission ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+#vision-mission ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #198754;
+  font-weight: bold;
+}
+
+/* ===== Informasi (Services) ===== */
+#services h2 {
+  color: #0b6623;
+}
+
+#services img,
+#services iframe {
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#services img:hover {
+  transform: scale(1.05);
+}
+
+#services a.btn {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.text-hijau { color: #14af06; }
+.text-biru { color: #003366; }
+
+/* ===== Register Section ===== */
+#register .card {
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+#register .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== Galeri ===== */
+#gallery img {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* === Galeri Rapi === */
+#gallery-kegiatan .col-md-4 a {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1; /* kotak */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#gallery-kegiatan img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#gallery-kegiatan img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Contact ===== */
+#contact p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#contact a {
+  color: #198754;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+#contact iframe {
+  border-radius: 12px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #198754;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+footer a:hover {
+  color: #ffd700 !important;
+}
+
+/* ===== Misc ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+.title-outline {
+  color: #4e4202; /* emas / kuning tua */
+}
+
+/* ===== Syarat Pendaftaran ===== */
+#syarat {
+  background: #f9fff9; /* hijau muda lembut */
+}
+
+#syarat h2 {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.syarat-list .list-group-item {
+  border: none;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+}
+
+.syarat-list .list-group-item::before {
+  content: "✔";
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 12px;
+}
